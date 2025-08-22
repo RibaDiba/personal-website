@@ -12,15 +12,15 @@
             </div>
             
             <!-- socials -->
-            <div class="text-base sm:text-xl lg:text-2xl flex flex-wrap gap-2 lg:gap-4 justify-center text-center text-white">
+            <div class="text-base sm:text-xl lg:text-2xl flex flex-wrap md:gap-2 gap-4 lg:gap-4 justify-center text-center text-white">
                 {#each socials as social}
                     <a href={social.link}>
-                        <img src={social.image} alt={social.name} class="w-[48px] h-auto">
+                        <img src={social.image} alt={social.name} class="w-[24px] md:w-[48px] h-auto">
                     </a>
                 {/each}
             </div>
                 
-            <div class="flex flex-wrap gap-1 lg:gap-2 text-center justify-center mt-1">
+            <div class="hidden md:flex flex-wrap gap-1 lg:gap-2 text-center justify-center mt-1">
                 <!-- buttons -->
                 <button 
                     class={`text-base sm:text-xl lg:text-2xl btn btn-link px-2 lg:px-4 hover:scale-105 transition-all duration-200 ${
