@@ -8,7 +8,7 @@
 
   --color-base-100: var(--color-stone-600);
   --color-base-200: #4B4843;
-  --color-base-300: oklch(92% 0.04 240);
+  --color-base-300: #D9D9D9;
   --color-base-content: oklch(20% 0.05 240);
   --color-primary: var(--color-orange-200);
   --color-primary-content: oklch(98% 0.01 240);
