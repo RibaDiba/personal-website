@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         env:
-          BASE_PATH: '/'
+          BASE_PATH: '/personal-website'
         run: npm run build
 
       - name: Upload Artifacts
