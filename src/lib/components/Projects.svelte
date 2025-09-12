@@ -17,7 +17,7 @@
             <div class="mt-[-24px] z-0 bg-[#878585] h-[80px] w-full rounded-2xl flex items-center justify-cnter text-center">
                 <div class="flex mt-10 ml-2 justify-center mb-4">
                         {#each project.tags as tag} 
-                            <div class="bg-[{tag.color}] text-[#4B4843] rounded-xl p-[7px] font-bold gap-5 mr-[10px] text-[14px]">{tag.name}</div>
+                            <div class="bg-[#FFEAD1] text-[#4B4843] rounded-xl p-[7px] font-bold gap-5 mr-[10px] text-[14px]">{tag.name}</div>
                         {/each}
                 </div>
             </div>
