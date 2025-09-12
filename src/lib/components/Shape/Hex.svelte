@@ -11,7 +11,7 @@
   <!-- hexagon polygon -->
   <polygon
     points="50,0 93,25 93,75 50,100 7,75 7,25"
-    class="fill-base-300"
+    class="fill-[#B0B0B0]"
   />
 
   <!-- this is the skill inside the poly-->

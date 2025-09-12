@@ -24,19 +24,27 @@
                 <!-- buttons -->
                 <button 
                     class={`text-base sm:text-xl lg:text-2xl btn btn-link px-2 lg:px-4 hover:scale-105 transition-all duration-200 ${
-                        $selection ? "text-white" : "text-primary"
+                        $selection == "AboutMe" ? "text-primary" : "text-white"
                     }`} 
-                    onclick={() => {selection.set(false)}}
+                    onclick={() => {selection.set("AboutMe")}}
                 >
                     About Me.
                 </button>
                 <button 
                     class={`text-base sm:text-xl lg:text-2xl btn btn-link px-2 lg:px-4 hover:scale-105 transition-all duration-200 ${
-                        !$selection ? "text-white" : "text-primary"
+                        $selection == "Skills" ? "text-primary" : "text-white"
                     }`} 
-                    onclick={() => {selection.set(true)}}
+                    onclick={() => {selection.set("Skills")}}
                 >
                     Skills.
+                </button>
+                <button 
+                    class={`text-base sm:text-xl lg:text-2xl btn btn-link px-2 lg:px-4 hover:scale-105 transition-all duration-200 ${
+                        $selection == "Projects" ? "text-primary" : "text-white"
+                    }`} 
+                    onclick={() => {selection.set("Projects")}}
+                >
+                    Projects.
                 </button>
             </div>
         </div>

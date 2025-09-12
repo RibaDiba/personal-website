@@ -1,3 +1,3 @@
 import { writable } from "svelte/store";
 
-export const selection = writable(false)
+export const selection = writable("AboutMe")
