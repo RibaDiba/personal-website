@@ -1,6 +1,9 @@
 <script>
     import { selection } from "$lib/stores/selection";
     import { socials } from "$lib/stores/socials";
+    function handleSelectionProjets() {
+
+    }
 </script>
 
 <main class="relative px-4">
@@ -26,7 +29,7 @@
                     class={`text-base sm:text-xl lg:text-2xl btn btn-link px-2 lg:px-4 hover:scale-105 transition-all duration-200 ${
                         $selection == "AboutMe" ? "text-primary" : "text-white"
                     }`} 
-                    onclick={() => {selection.set("AboutMe")}}
+                    on:click={() => {selection.set("AboutMe")}}
                 >
                     About Me.
                 </button>
@@ -34,7 +37,7 @@
                     class={`text-base sm:text-xl lg:text-2xl btn btn-link px-2 lg:px-4 hover:scale-105 transition-all duration-200 ${
                         $selection == "Skills" ? "text-primary" : "text-white"
                     }`} 
-                    onclick={() => {selection.set("Skills")}}
+                    on:click={() => {selection.set("Skills")}}
                 >
                     Skills.
                 </button>
@@ -42,15 +45,11 @@
                     class={`text-base sm:text-xl lg:text-2xl btn btn-link px-2 lg:px-4 hover:scale-105 transition-all duration-200 ${
                         $selection == "Projects" ? "text-primary" : "text-white"
                     }`} 
-                    onclick={() => {selection.set("Projects")}}
+                    on:click={() => {selection.set("Projects")}}
                 >
                     Projects.
                 </button>
             </div>
-        </div>
-        <!-- figma tag-->
-        <div class="absolute bottom-4 right-4 lg:right-[-100px] lg:bottom-0 text-xs lg:text-sm text-right text-white opacity-75">
-            Designed with Figma :)
         </div>
     </div>    
 </main>
