@@ -26,7 +26,7 @@
 	<div class="grid lg:grid-cols-12 justify-center items-center gap-4 px-4 min-h-screen">
 		<!-- Left column -->
 		<div class="lg:col-start-1 lg:col-span-5 flex justify-center items-center">
-			<div class="w-full min-h-[200px] flex items-center justify-center">
+			<div class="w-full min-h-[700px] flex items-center justify-center">
 				{#if isProjects}
 					<!-- Show Name on the left when Projects is active -->
 					<div 
@@ -40,8 +40,8 @@
 					<!-- Show Info on the left when not viewing Projects -->
 					<div 
 						class="w-full text-center" 
-						in:fly={{ x: -100, duration: 300, delay: 100, easing: cubicOut }} 
-						out:fly={{ x: -100, duration: 200, easing: cubicOut }}
+						in:fade={{ duration: 300, delay: 100, easing: cubicOut }} 
+						out:fade={{ duration: 200, easing: cubicOut }}
 					>
 						<InfoSection />
 					</div>
@@ -51,13 +51,13 @@
 
 		<!-- Right column -->
 		<div class="lg:col-start-6 lg:col-span-7 flex justify-center items-center">
-			<div class="w-full min-h-[200px] flex items-center justify-center">
+			<div class="w-full min-h-[700px] flex items-center justify-center">
 				{#if isProjects}
 					<!-- Show Projects on the right when active -->
 					<div 
 						class="w-full" 
-						in:fly={{ x: 100, duration: 300, delay: 150, easing: cubicOut }} 
-						out:fly={{ x: 100, duration: 200, easing: cubicOut }}
+						in:fade={{ duration: 300, delay: 150, easing: cubicOut }} 
+						out:fade={{ duration: 200, easing: cubicOut }}
 					>
 						<Projects />
 					</div>
