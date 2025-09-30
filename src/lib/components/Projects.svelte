@@ -7,6 +7,7 @@
 	let showModal = false;
 
 	function handleCurrIndex(newIndex: number) {
+		selectedTab = 'desc';
 		const last = projects.length - 1;
 		if (newIndex < 0) currIndex = last;
 		else if (newIndex > last) currIndex = 0;
@@ -62,11 +63,12 @@
 	// image url for screenshot section
 	$: imageUrl = current?.media?.image ? String(current.media.image).trim() : '';
 
-	let displayedDesc: string[] = [];
+		let displayedDesc: string[] = [];
 	let descInterval: any;
+	let selectedTab: 'problem' | 'solution' | 'desc' = 'desc';
 
-	function typeDescription(index: number) {
-		const targetDesc = projects[index].desc;
+	function typeDescription(index: number, contentType: 'problem' | 'solution' | 'desc') {
+		const targetDesc = projects[index][contentType];
 		let currentDesc = '';
 		let paragraphIndex = 0;
 		let charIndex = 0;
@@ -96,9 +98,9 @@
 	}
 
 	$: {
-		// This block will run whenever currIndex changes
+		// This block will run whenever currIndex or selectedTab changes
 		if (typeof window !== 'undefined') {
-			typeDescription(currIndex);
+			typeDescription(currIndex, selectedTab);
 		}
 	}
 </script>
@@ -187,7 +189,7 @@
 			</div>
 
 			<!-- Screenshot Media -->
-			<div class="mt-5 rounded-2xl bg-base-200/40 border border-white/10 shadow-inner p-3 transition-transform hover:scale-105">
+			<div class="mt-5 rounded-2xl bg-base-200/40 border border-white/10 shadow-inner p-3 transition-transform hover:scale-105 cursor-pointer">
 				{#if imageUrl}
 					<div class="relative w-full flex items-center justify-center">
 						<div class="w-full max-w-[720px] flex justify-center">
@@ -216,12 +218,25 @@
 		<!-- Details -->
 		<div class="lg:col-span-2 flex flex-col overflow-scroll">
 			<div
-				class="rounded-2xl bg-base-200/40 border border-white/10 p-4 lg:p-5 shadow-md flex-1"
+				class="rounded-2xl bg-base-200/40 border border-white/10 p-4 lg:p-5 shadow-md flex-1 "
 			>
-				<div class="text-lg font-semibold mb-2 text-[#FFEAD1]">About this project</div>
-				<div class="text-sm text-white/80 leading-relaxed flex gap-2.5 flex-col">
+										<div role="tablist" class="tabs tabs-lifted flex justify-center">
+					<a role="tab" class="tab text-md"
+					   class:tab-active={selectedTab === 'desc'}
+					   style={selectedTab === 'desc' ? 'background-color: #FFEAD1 !important; color: #3b3834 !important; border-radius: 40px' : 'color: white;'}
+					   on:click={() => selectedTab = 'desc'}>About</a>
+					<a role="tab" class="tab text-md"
+					   class:tab-active={selectedTab === 'problem'}
+					   style={selectedTab === 'problem' ? 'background-color: #FFEAD1 !important; color: #3b3834 !important; border-radius: 40px' : 'color: white;'}
+					   on:click={() => selectedTab = 'problem'}>Problem</a>
+					<a role="tab" class="tab text-md"
+					   class:tab-active={selectedTab === 'solution'}
+					   style={selectedTab === 'solution' ? 'background-color: #FFEAD1 !important; color: #3b3834 !important; border-radius: 40px' : 'color: white;'}
+					   on:click={() => selectedTab = 'solution'}>Solution</a>
+				</div>
+				<div class="text-sm text-white/80 leading-relaxed flex gap-2.5 flex-col mt-4">
 					{#each displayedDesc as desc}
-						<div>{desc}</div>
+						<div class="">{desc}</div>
 					{/each}
 				</div>
 			</div>
