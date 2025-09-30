@@ -6,16 +6,16 @@
   });
 
   import Hex from "./Shape/Hex.svelte";
-  import cplusplus from "../assets/logos_skills/c++.png"
-  import javascript from "../assets/logos_skills/javascript.png"
-  import python from "../assets/logos_skills/python.png"
-  import java from "../assets/logos_skills/java.png"
+  import cplusplus from "$lib/assets/logos_skills/c++.png"
+  import javascript from "$lib/assets/logos_skills/javascript.png"
+  import python from "$lib/assets/logos_skills/python.png"
+  import java from "$lib/assets/logos_skills/java.png"
 
-  import react from "../assets/logos_skills/react.png"
-  import svelte from "../assets/logos_skills/svelte.png"
-  import next from "../assets/logos_skills/next.svg"
+  import react from "$lib/assets/logos_skills/react.png"
+  import svelte from "$lib/assets/logos_skills/svelte.png"
+  import next from "$lib/assets/logos_skills/next.svg"
 
-  import arduino from "../assets/logos_skills/arduino.svg"
+  import arduino from "$lib/assets/logos_skills/arduino.svg"
 	import { onMount } from "svelte";
 
   let rows = [

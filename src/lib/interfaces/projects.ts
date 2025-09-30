@@ -1,8 +1,8 @@
-import BDS_Sketch from '../assets/project_media/Sketch_BDS.jpg';
-import Sketch_Shield from '../assets/project_media/Sketch_Shield.jpg';
-import Scioly_Map from '../assets/project_media/Scioly_Map.png';
-import Vehicle_Final from '../assets/project_media/Vehicle_Final.jpg';
-import EV_Model from '../assets/project_media/EV_Model.png';
+import BDS_Sketch from '$lib/assets/project_media/Sketch_BDS.jpg';
+import Sketch_Shield from '$lib/assets/project_media/Sketch_Shield.jpg';
+import Scioly_Map from '$lib/assets/project_media/Scioly_Map.png';
+import Vehicle_Final from '$lib/assets/project_media/Vehicle_Final.jpg';
+import EV_Model from '$lib/assets/project_media/EV_Model.png';
 
 export const projects: Project[] = [
     {
