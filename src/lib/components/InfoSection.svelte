@@ -2,7 +2,7 @@
     import { selection } from "$lib/stores/selection";
 	import AboutMe from "./AboutMe.svelte";
 	import Skills from "./Skills.svelte";
-    import image from "$lib/assets/Profile_Pic.png"
+    import image from "/src/lib/assets/Profile_Pic.png?url"
 	import Projects from "./Projects.svelte";
 </script>
 
