@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abir Modak",
+  title: "Personal Website",
   description: "Personal website showcasing my projects and skills.",
+  icons: {
+    icon: '/favicon.jpg',
+  },
   openGraph: {
     title: "Abir Modak",
     description: "Personal website showcasing my projects and skills.",
