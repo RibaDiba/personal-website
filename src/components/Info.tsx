@@ -33,7 +33,7 @@ const Info = () => {
                                 initial="initial"
                                 animate="animate"
                                 exit="exit"
-                                transition={{ duration: 0.8, ease: "easeInOut" }}
+                                transition={{ duration: 0.5, ease: "easeInOut" }}
                                 className="w-full flex justify-center"
                             >
                                 <AboutMe />
@@ -46,7 +46,7 @@ const Info = () => {
                                 initial="initial"
                                 animate="animate"
                                 exit="exit"
-                                transition={{ duration: 0.8, ease: "easeInOut" }}
+                                transition={{ duration: 0.5, ease: "easeInOut" }}
                                 className="w-full flex justify-center"
                             >
                                 <Skills />
@@ -59,7 +59,7 @@ const Info = () => {
                                 initial="initial"
                                 animate="animate"
                                 exit="exit"
-                                transition={{ duration: 0.8, ease: "easeInOut" }}
+                                transition={{ duration: 0.5, ease: "easeInOut" }}
                                 className="w-full flex justify-center"
                             >
                                 <Projects />

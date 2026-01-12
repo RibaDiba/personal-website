@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useBubbles } from "../hooks/useBubbles";
+import { Links } from "@/stores/Links";
 
 const Name = () => {
     const { bubbles, scrollY } = useBubbles();
@@ -44,21 +45,19 @@ const Name = () => {
                 <div className="animate-fade-in relative z-10 flex h-full w-full flex-col items-center justify-center gap-[60px] text-orange-200 text-9xl pointer-events-none">
                     <div className="pointer-events-auto">Abir Modak</div>
                     <div className="flex gap-[32px] pointer-events-auto">
-                        <a href="">
+                        <a href={Links.GithubLink}>
                             <img src="/Socials_Orange/Github.png" alt="Github" />
                         </a>
-
-                        <a href="">
-                            <img src="/Socials_Orange/Instagram.png" alt="Instagram" />
-                        </a>
-
-                        <a href="">
+                        <a href={Links.LinkedinLink}>
                             <img src="/Socials_Orange/Linkedin.png" alt="LinkedIn" />
+                        </a>
+                        <a href={Links.InstaGramLink}>
+                            <img src="/Socials_Orange/Instagram.png" alt="Instagram" />
                         </a>
                     </div>
                 </div>
 
-                <div className="animate-fade-in absolute bottom-4 left-4 z-10 text-xl text-white sm:bottom-8 sm:left-8 md:text-2xl">
+                <div className="animate-fade-in absolute bottom-4 left-4 z-10 text-xl text-white sm:bottom-8 sm:left-8 md:text-4xl">
                     Scroll &gt;
                 </div>
             </div>

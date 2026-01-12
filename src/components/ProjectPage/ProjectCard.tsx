@@ -9,7 +9,7 @@ const ProjectCard = ({ projectTitle, projectImage }: ProjectProps) => {
 
     return (
         <motion.div 
-            className="flex flex-col w-64 h-64 rounded-3xl overflow-hidden shadow-lg"
+            className="flex flex-col w-60 h-60 rounded-3xl overflow-hidden shadow-lg"
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
         >

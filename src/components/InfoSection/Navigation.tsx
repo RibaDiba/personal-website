@@ -1,5 +1,7 @@
 
 
+import { Links } from "@/stores/Links";
+
 const Navigation = ({ active, setActive }: { active: string; setActive: (page: string) => void }) => {
 
     const handleSetActive = (page: string) => {
@@ -14,6 +16,9 @@ const Navigation = ({ active, setActive }: { active: string; setActive: (page: s
             {/* pfp with circle */} 
             <div className="relative h-[250px] w-[250px]">
                 <div className="absolute top-[20px] left-[10px] h-[250px] w-[250px] rounded-full bg-[#57534E]"></div>
+                <div className="absolute top-0 left-0 h-[250px] w-[250px] rounded-full overflow-hidden border-4 border-[#57534E]">
+                    <img src="/PFP.png" alt="Profile" className="h-full w-full object-cover" />
+                </div>
             </div>
 
             <div className="flex flex-col items-start gap-4 text-5xl text-gray-500">
@@ -25,29 +30,29 @@ const Navigation = ({ active, setActive }: { active: string; setActive: (page: s
                 </button>
 
                 <button 
-                    onClick={() => handleSetActive("Projects")}
-                    className={`${isActive("Projects") ? "text-black" : "hover:text-black transition-colors"}`}
-                >
-                    <div className="cursor-pointer">Projects.</div>
-                </button>
-
-                <button 
                     onClick={() => handleSetActive("Skills")}
                     className={`${isActive("Skills") ? "text-black" : "hover:text-black transition-colors"}`}
                 >
                     <div className="cursor-pointer">Skills.</div>
                 </button>
+
+                <button 
+                    onClick={() => handleSetActive("Projects")}
+                    className={`${isActive("Projects") ? "text-black" : "hover:text-black transition-colors"}`}
+                >
+                    <div className="cursor-pointer">Projects.</div>
+                </button>
             </div>
 
             {/* socials */}
             <div className="flex gap-6">
-                <a href="#">
+                <a href={Links.GithubLink}>
                     <img src="/Socials_Gray/Github.png" alt="Github" className="h-12 w-auto" />
                 </a>
-                <a href="#">
+                <a href={Links.LinkedinLink}>
                     <img src="/Socials_Gray/Linkedin.png" alt="LinkedIn" className="h-12 w-auto" />
                 </a>
-                <a href="#">
+                <a href={Links.InstaGramLink}>
                     <img src="/Socials_Gray/Instagram.png" alt="Instagram" className="h-12 w-auto" />
                 </a>
             </div>
